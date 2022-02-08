@@ -17,3 +17,6 @@
 ![Иллюстрация к проекту](https://sun9-73.userapi.com/impg/hXUcAJhPO8z6qYBaD6oV-yEZbkvdeRYAQH9epg/u6WFvY7DbzI.jpg?size=1712x1074&quality=96&sign=ea86c5df1e4429034bd6c002a806c863&type=album)
 
 
+*** 
+## Источники:
+Nebo.live API: https://nebo.live/docs/v2/index.html
