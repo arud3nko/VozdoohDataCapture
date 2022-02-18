@@ -17,3 +17,8 @@ pars = {'hash': api_hash}
 
 response = requests.get('https://nebo.live/api/v2/cities', headers=request_header, params=pars)
 print(response)
+
+
+def get_current_pollution():
+    return None
+

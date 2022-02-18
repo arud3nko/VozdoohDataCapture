@@ -40,13 +40,18 @@ def create_weather_obj(data):
     return weather_obj
 
 
-def main():
+def get_current_weather():
+    parse_json_data()
     with open('data.json', 'r') as file:
         data = json.load(file)
 
     weather_obj = create_weather_obj(data)
 
     return weather_obj
+
+
+def main():
+    pass
 
 
 if __name__ == '__main__':
