@@ -1,6 +1,6 @@
 from weather import get_current_weather
 from nebo import get_current_pollution
-import sqlite3
+from mysql.connector import connect, Error
 import datetime
 
 
@@ -9,22 +9,36 @@ def main():
     weather = get_current_weather()
     pollution = get_current_pollution()
 
-    sql_connection = sqlite3.connect('pollution_weather.db')
-    cursor = sql_connection.cursor()
+    # sql_connection = sqlite3.connect('pollution_weather.db')
+    # cursor = sql_connection.cursor()
 
-    sql_query = """INSERT INTO data (date, pollution, temp, wind_speed, wind_dir,
-                    pressure, humidity, cloudness, condition, season)
-                    VALUES 
-                    (?,?,?,?,?,?,?,?,?,?);"""
+    try:
+        sql_connection = connect(
+            host = '195.133.145.83',
+            user = 'remote',
+            password = '1lxyz8',
+            database = 'pollution'
+        )
+        cursor = sql_connection.cursor()
+    except Error as E:
+        print(E)
 
-    data_tuple = (current_datetime, pollution, weather.temp, weather.wind_speed,
-                  weather.wind_dir, weather.pressure, weather.humidity,
-                  weather.cloudness, weather.condition, weather.season)
+    try:
+        sql_query = """INSERT INTO `data` (`date`, pollution, temp, wind_speed, wind_dir,
+                        pressure, humidity, cloudness, `condition`, season)
+                        VALUES 
+                        (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"""
 
-    count = cursor.execute(sql_query, data_tuple)
-    sql_connection.commit()
-    cursor.close()
+        data_tuple = (current_datetime, pollution, weather.temp, weather.wind_speed,
+                      weather.wind_dir, weather.pressure, weather.humidity,
+                      weather.cloudness, weather.condition, weather.season)
 
+        count = cursor.execute(sql_query, data_tuple)
+        sql_connection.commit()
+
+    except Exception as e:
+        sql_connection.commit()
+        print(e)
 
 
 if __name__ == '__main__':
