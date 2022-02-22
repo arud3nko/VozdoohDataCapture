@@ -1,12 +1,12 @@
 import requests
 import json
 
-api_key = '2917db88-d0cf-4c58-a782-8714cdab0094'
+api_key = ''
 
 req_header = {"X-Yandex-API-Key": api_key}
 req_params = {
-    'lat': '56.00873634789648',
-    'lon': '92.8822927027789',
+    'lat': '55.976276',
+    'lon': '92.854022',
     'lang': 'ru_RU',
     'limit': '2'
 }
