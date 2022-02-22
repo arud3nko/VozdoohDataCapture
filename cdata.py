@@ -14,10 +14,10 @@ def main():
 
     try:
         sql_connection = connect(
-            host = '195.133.145.83',
-            user = 'remote',
-            password = '1lxyz8',
-            database = 'pollution'
+            host = '',
+            user = '',
+            password = '',
+            database = ''
         )
         cursor = sql_connection.cursor()
     except Error as E:
