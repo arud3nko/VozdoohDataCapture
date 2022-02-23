@@ -1,7 +1,7 @@
-import requests
 import json
+import requests
 
-api_key = ''
+api_key = '2917db88-d0cf-4c58-a782-8714cdab0094'
 
 req_header = {"X-Yandex-API-Key": api_key}
 req_params = {
@@ -11,7 +11,7 @@ req_params = {
     'limit': '2'
 }
 
-
+#dataclass
 class WeatherObj:
     def __init__(self, *args):
         self.temp = args[0]
@@ -27,8 +27,7 @@ class WeatherObj:
 def parse_json_data():
     request = requests.get('https://api.weather.yandex.ru/v2/forecast', headers=req_header, params=req_params)
     request_result = request.text
-    with open('data.json', 'w') as file:
-        file.write(request_result)
+    return request_result
 
 
 def create_weather_obj(data):
@@ -41,9 +40,7 @@ def create_weather_obj(data):
 
 
 def get_current_weather():
-    parse_json_data()
-    with open('data.json', 'r') as file:
-        data = json.load(file)
+    data = json.loads(parse_json_data())
 
     weather_obj = create_weather_obj(data)
 
@@ -51,7 +48,7 @@ def get_current_weather():
 
 
 def main():
-    pass
+    print(get_current_weather().temp)
 
 
 if __name__ == '__main__':
