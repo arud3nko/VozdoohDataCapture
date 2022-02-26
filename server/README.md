@@ -10,6 +10,12 @@
 
 · Идёт наполнение базы данных 
 
+· На основе полученных данных сгенерирован график, показывающий зависимость уровня загрязнения от погодных условий
+
+![График](https://sun9-64.userapi.com/impg/w1Q9msyGpEk4l1kTVMh8dz69T32DnW8eIKgLFg/gaDXJ5rPD6o.jpg?size=640x480&quality=96&sign=96f8fd96bedfacd5e6fb9a97eaf56f29&type=album)
+
+· Создан макет Telegram-бота в Figma: https://www.figma.com/file/YUI2ipUfK9KhMZ3sNFBU5v/Prototyping-in-Figma
+
 ***
 
 ## Задачи
