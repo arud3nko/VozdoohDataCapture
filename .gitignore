@@ -4,7 +4,8 @@ __pycache__/
 *$py.class
 images/
 server/conf.dist
-
+.idea
+.DS_Store
 # C extensions
 *.so
 
