@@ -12,7 +12,7 @@
 
 · На основе полученных данных сгенерирован график, показывающий зависимость уровня загрязнения от погодных условий
 
-![График](https://sun9-64.userapi.com/impg/w1Q9msyGpEk4l1kTVMh8dz69T32DnW8eIKgLFg/gaDXJ5rPD6o.jpg?size=640x480&quality=96&sign=96f8fd96bedfacd5e6fb9a97eaf56f29&type=album)
+![График](https://sun9-78.userapi.com/impf/fZvJ4ur3AGAkrRxdAmiIIFVklTWox2Sef9B0Sw/UJwY7kVuK0E.jpg?size=1200x800&quality=96&sign=70d1b395b5e87022502ed406ab4940e3&type=album)
 
 · Создан макет Telegram-бота в Figma: https://www.figma.com/file/YUI2ipUfK9KhMZ3sNFBU5v/Prototyping-in-Figma
 
@@ -29,7 +29,7 @@
 ## Цель
 Создать сервис, заранее рассчитывающий уровень загрязнения, в зависимости от погодных условий.
 
-![Иллюстрация к проекту](https://sun9-78.userapi.com/impf/fZvJ4ur3AGAkrRxdAmiIIFVklTWox2Sef9B0Sw/UJwY7kVuK0E.jpg?size=1200x800&quality=96&sign=70d1b395b5e87022502ed406ab4940e3&type=album)
+![Иллюстрация к проекту](https://sun9-73.userapi.com/impg/hXUcAJhPO8z6qYBaD6oV-yEZbkvdeRYAQH9epg/u6WFvY7DbzI.jpg?size=1712x1074&quality=96&sign=ea86c5df1e4429034bd6c002a806c863&type=album)
 
 
 *** 
