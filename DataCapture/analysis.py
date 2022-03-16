@@ -1,14 +1,14 @@
-from mysql.connector import connect, Error
 import matplotlib.pyplot as plt
-import numpy as np
 import pytz
-from statistics import mean
-from mpl_toolkits.mplot3d import Axes3D
-from  matplotlib.colors import LinearSegmentedColormap
+from mysql.connector import connect, Error
+from matplotlib.colors import LinearSegmentedColormap
 from datetime import datetime
+from settings import get_config
+
+Config = get_config()
 
 Krasnoyarsk = pytz.timezone('Asia/Krasnoyarsk')
-global_path = '/var/www/'
+global_path = Config.GLOBAL_PATH
 
 
 def execute_read_query(connection, query):
@@ -39,7 +39,6 @@ def pollution_time_graph(pollution, wind_speed):
         f"\nПоследнее обновление: {datetime.now(Krasnoyarsk)}")
     plt.plot(count, pollution, color='darkred', linewidth=3)
     plt.savefig(global_path+"images/pollution-time-graph.png")
-    # plt.show()
 
 
 def wind_speed_time_graph(pollution, wind_speed):
@@ -58,7 +57,6 @@ def wind_speed_time_graph(pollution, wind_speed):
     plt.grid(True)
     plt.plot(count, y, color='mediumvioletred')
     plt.savefig(global_path+"images/wind-speed-time-graph.png")
-    # plt.show()
 
 
 def pollution_wind_speed_graph(pollution, wind_speed):
@@ -77,8 +75,6 @@ def pollution_wind_speed_graph(pollution, wind_speed):
 
     plt.title(f"График зависимости уровня загрязнения воздуха\nот скорости ветра. Последнее обновление: {datetime.now(Krasnoyarsk)}")
     plt.savefig(global_path+"images/graph-pollution-wind-speed.png")
-
-    # plt.show()
 
 
 def pollution_wind_speed_temp_graph(pollution, wind_speed, temperature):
@@ -103,17 +99,16 @@ def pollution_wind_speed_temp_graph(pollution, wind_speed, temperature):
     plt.title(f"График зависимости уровня загрязнения воздуха от погодных условий. Замеров: {len(pollution)}\n"
               f"Последнее обновление: {datetime.now(Krasnoyarsk)}")
     plt.savefig(global_path+'images/graph.png')
-    # plt.show()
 
 
 def main():
 
     try:
         sql_connection = connect(
-            host = '195.133.145.83',
-            user = 'remote',
-            password = '1lxyz8',
-            database = 'pollution'
+            host=Config.HOST,
+            user=Config.USER,
+            password=Config.PASSWORD,
+            database=Config.DATABASE
         )
 
     except Error as E:
@@ -128,16 +123,9 @@ def main():
     temperature = []
 
     for row in rows:
-        # print(f'AIR: {row[2]} | TEMP: {row[3]} |  W-SPEED: {float(row[4])}')
         pollution.append(int(row[2]))
         wind_speed.append(float(row[4]))
         temperature.append(int(row[3]))
-
-    pollution_unique = []
-    wind_speed_unique = []
-
-    # print(min(pollution), max(pollution))
-    # print(min(wind_speed), max(wind_speed))
 
     pollution_time_graph(pollution, wind_speed)
     wind_speed_time_graph(pollution, wind_speed)

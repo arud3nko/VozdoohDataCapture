@@ -3,11 +3,15 @@ __pycache__/
 *.py[cod]
 *$py.class
 images/
-server/conf.dist
+DataCapture/conf.dist
 .idea
+.idea/*
 .DS_Store
 # C extensions
 *.so
+
+DataCapture/conf.ini
+*.ini
 
 # Distribution / packaging
 .Python
