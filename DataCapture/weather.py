@@ -1,6 +1,7 @@
 import json
 import requests
 from settings import get_config
+from dataclasses import dataclass
 
 Config = get_config()
 
@@ -15,16 +16,16 @@ req_params = {
 }
 
 
+@dataclass
 class WeatherObj:
-    def __init__(self, *args):
-        self.temp = args[0]
-        self.condition = args[1]
-        self.wind_speed = args[2]
-        self.wind_dir = args[3]
-        self.pressure = args[4]
-        self.humidity = args[5]
-        self.season = args[6]
-        self.cloudness = args[7]
+    temp: str
+    condition: str
+    wind_speed: str
+    wind_dir: str
+    pressure: str
+    humidity: str
+    season: str
+    cloudness: str
 
 
 def parse_json_data():
@@ -35,10 +36,10 @@ def parse_json_data():
 
 def create_weather_obj(data):
     data = data['fact']
-    weather_obj = WeatherObj(data['temp'], data['condition'],
-                             data['wind_speed'], data['wind_dir'],
-                             data['pressure_mm'], data['humidity'],
-                             data['season'], 'NULL')  # bug fix data['cloudness'])
+    weather_obj = WeatherObj(temp=data['temp'], condition=data['condition'],
+                             wind_speed=data['wind_speed'], wind_dir=data['wind_dir'],
+                             pressure=data['pressure_mm'], humidity=data['humidity'],
+                             season=data['season'], cloudness='NULL')  # bug fix data['cloudness'])
 
     return weather_obj
 
@@ -51,7 +52,7 @@ def get_current_weather():
 
 
 def main():
-    pass
+    print(get_current_weather().temp)
 
 
 if __name__ == '__main__':
