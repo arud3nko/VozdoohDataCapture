@@ -29,7 +29,7 @@
 ## Цель
 Создать сервис, заранее рассчитывающий уровень загрязнения, в зависимости от погодных условий.
 
-![Иллюстрация к проекту](https://sun9-73.userapi.com/impg/hXUcAJhPO8z6qYBaD6oV-yEZbkvdeRYAQH9epg/u6WFvY7DbzI.jpg?size=1712x1074&quality=96&sign=ea86c5df1e4429034bd6c002a806c863&type=album)
+![Иллюстрация к проекту](https://sun9-78.userapi.com/impf/fZvJ4ur3AGAkrRxdAmiIIFVklTWox2Sef9B0Sw/UJwY7kVuK0E.jpg?size=1200x800&quality=96&sign=70d1b395b5e87022502ed406ab4940e3&type=album)
 
 
 *** 
