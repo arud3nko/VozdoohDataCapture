@@ -12,6 +12,7 @@ DataCapture/conf.dist
 
 DataCapture/conf.ini
 *.ini
+conf.ini
 
 # Distribution / packaging
 .Python
