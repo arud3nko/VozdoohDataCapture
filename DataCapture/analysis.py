@@ -25,6 +25,23 @@ def execute_read_query(connection, query):
         print(f"The error '{e}' occurred")
 
 
+def watermark():
+    ax = plt.gca()
+    im_ya = plt.imread(yandex_logo)
+    ax.figure.figimage(im_ya,
+                       ax.bbox.xmax/2.29,
+                       ax.bbox.ymax/1.125,
+                       alpha=0.5, zorder=1)
+
+    im_nebo = plt.imread(nebo_logo)
+    ax.figure.figimage(im_nebo,
+                       ax.bbox.xmax/1.87,
+                       ax.bbox.ymax/1.19,
+                       alpha=1, zorder=1)
+
+    return ax
+
+
 def pollution_time_graph(pollution, wind_speed):
     count = [i for i in range(len(pollution))]
 
@@ -42,18 +59,7 @@ def pollution_time_graph(pollution, wind_speed):
         f"\nПоследнее обновление: {datetime.now(Krasnoyarsk)}")
     plt.plot(count, pollution, color='darkred', linewidth=3)
 
-    ax = plt.gca()
-    im_ya = plt.imread(yandex_logo)
-    ax.figure.figimage(im_ya,
-                       ax.bbox.xmax/2.29,
-                       ax.bbox.ymax/1.1,
-                       alpha=0.5, zorder=1)
-
-    im_nebo = plt.imread(nebo_logo)
-    ax.figure.figimage(im_nebo,
-                       ax.bbox.xmax/1.87,
-                       ax.bbox.ymax/1.18,
-                       alpha=1, zorder=1)
+    watermark()
 
     plt.savefig(global_path+"images/pollution-time-graph.png")
 
@@ -74,18 +80,7 @@ def wind_speed_time_graph(pollution, wind_speed):
     plt.grid(True)
     plt.plot(count, y, color='mediumvioletred')
 
-    ax = plt.gca()
-    im_ya = plt.imread(yandex_logo)
-    ax.figure.figimage(im_ya,
-                       ax.bbox.xmax/2.29,
-                       ax.bbox.ymax/1.1,
-                       alpha=0.5, zorder=1)
-
-    im_nebo = plt.imread(nebo_logo)
-    ax.figure.figimage(im_nebo,
-                       ax.bbox.xmax/1.87,
-                       ax.bbox.ymax/1.18,
-                       alpha=1, zorder=1)
+    watermark()
 
     plt.savefig(global_path+"images/wind-speed-time-graph.png")
 
@@ -106,18 +101,7 @@ def pollution_wind_speed_graph(pollution, wind_speed):
 
     plt.title(f"График зависимости уровня загрязнения воздуха\nот скорости ветра. Последнее обновление: {datetime.now(Krasnoyarsk)}")
 
-    ax = plt.gca()
-    im_ya = plt.imread(yandex_logo)
-    ax.figure.figimage(im_ya,
-                       ax.bbox.xmax/2.29,
-                       ax.bbox.ymax/1.1,
-                       alpha=0.5, zorder=1)
-
-    im_nebo = plt.imread(nebo_logo)
-    ax.figure.figimage(im_nebo,
-                       ax.bbox.xmax/1.87,
-                       ax.bbox.ymax/1.18,
-                       alpha=1, zorder=1)
+    watermark()
 
     plt.savefig(global_path+"images/graph-pollution-wind-speed.png")
 
@@ -144,18 +128,7 @@ def pollution_wind_speed_temp_graph(pollution, wind_speed, temperature):
     plt.title(f"График зависимости уровня загрязнения воздуха от погодных условий. Замеров: {len(pollution)}\n"
               f"Последнее обновление: {datetime.now(Krasnoyarsk)}")
 
-    ax = plt.gca()
-    im_ya = plt.imread(yandex_logo)
-    ax.figure.figimage(im_ya,
-                       ax.bbox.xmax/2.29,
-                       ax.bbox.ymax/1.1,
-                       alpha=0.5, zorder=1)
-
-    im_nebo = plt.imread(nebo_logo)
-    ax.figure.figimage(im_nebo,
-                       ax.bbox.xmax/1.87,
-                       ax.bbox.ymax/1.18,
-                       alpha=1, zorder=1)
+    watermark()
 
     plt.savefig(global_path+'images/graph.png')
 
