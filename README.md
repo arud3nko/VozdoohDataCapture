@@ -1,6 +1,11 @@
 # Проект в рамках дисциплины ВВПД СФУ. 
 ## Выполняется: София Рус, Егор Удалов
 
+![telegram](https://img.shields.io/badge/Telegram-arud3nko-informational?style=for-the-badge&logo=appveyor)
+![issues](https://img.shields.io/github/issues/arud3nko/python-ML-airpollution?label=ISSUES&style=for-the-badge)
+![serverstatus](https://img.shields.io/website?down_message=OFFLINE&label=SERVER&style=for-the-badge&up_message=Running&url=http%3A%2F%2Funiver.icu)
+
+
 ***
 
 ## Ход разработки
