@@ -17,7 +17,9 @@
 
 · На основе полученных данных сгенерирован график, показывающий зависимость уровня загрязнения от погодных условий
 
-![site](https://ibb.co/1mfrXz1)
+· Создан landing-page на Flask
+
+![site](https://i.ibb.co/71JnpkP/2022-03-29-11-11-16-PM.png)
 
 · Создан макет Telegram-бота в Figma: https://www.figma.com/file/YUI2ipUfK9KhMZ3sNFBU5v/Prototyping-in-Figma
 
