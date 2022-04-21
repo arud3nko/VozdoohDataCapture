@@ -1,6 +1,11 @@
 # Проект в рамках дисциплины ВВПД СФУ. 
 ## Выполняется: София Рус, Егор Удалов
 
+![telegram](https://img.shields.io/badge/Telegram-arud3nko-informational?style=for-the-badge&logo=appveyor)
+![issues](https://img.shields.io/github/issues/arud3nko/python-ML-airpollution?label=ISSUES&style=for-the-badge)
+![serverstatus](https://img.shields.io/website?down_message=OFFLINE&label=SERVER&style=for-the-badge&up_message=Running&url=http%3A%2F%2Funiver.icu)
+
+
 ***
 
 ## Ход разработки
@@ -12,7 +17,9 @@
 
 · На основе полученных данных сгенерирован график, показывающий зависимость уровня загрязнения от погодных условий
 
-![График](https://sun9-64.userapi.com/impg/w1Q9msyGpEk4l1kTVMh8dz69T32DnW8eIKgLFg/gaDXJ5rPD6o.jpg?size=640x480&quality=96&sign=96f8fd96bedfacd5e6fb9a97eaf56f29&type=album)
+· Создан landing-page на Flask
+
+![site](https://i.ibb.co/71JnpkP/2022-03-29-11-11-16-PM.png)
 
 · Создан макет Telegram-бота в Figma: https://www.figma.com/file/YUI2ipUfK9KhMZ3sNFBU5v/Prototyping-in-Figma
 
