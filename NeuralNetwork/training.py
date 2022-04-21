@@ -4,7 +4,6 @@ import warnings
 import seaborn as sns
 import matplotlib.pyplot as plt
 from pylab import rcParams
-import pandas as pd
 from sklearn.model_selection import train_test_split, StratifiedKFold
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import GridSearchCV, cross_val_score
@@ -100,4 +99,4 @@ tree_grid = GridSearchCV(reg, reg_params, cv=5, n_jobs=-1, verbose=True)
 
 tree_grid.fit(X_train, y_train)
 
-joblib.dump(tree_grid, 'neural_net.pkl', compress = 1)
+joblib.dump(tree_grid, 'neural_net.pkl', compress=1)
