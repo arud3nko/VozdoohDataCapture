@@ -1,6 +1,6 @@
 import joblib
 
-tree_grid = joblib.load('neural_net.pkl')
+tree_grid = joblib.load('NeuralNetwork/neural_net.pkl')
 
 
 def forecast(temp, wind_speed, wind_dir, pressure, humidity, condition):
@@ -26,4 +26,4 @@ def forecast(temp, wind_speed, wind_dir, pressure, humidity, condition):
     return result
 
 
-print(forecast('-5', '1.2', '0', '751', '58', 'clear'))
+# print(forecast('-5', '1.2', '0', '751', '58', 'clear'))
