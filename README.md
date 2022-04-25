@@ -23,6 +23,8 @@
 
 · Создан макет Telegram-бота в Figma: https://www.figma.com/file/YUI2ipUfK9KhMZ3sNFBU5v/Prototyping-in-Figma
 
+· Обучена нейронная сеть для прогнозирования качества воздуха
+
 ***
 
 ## Задачи
