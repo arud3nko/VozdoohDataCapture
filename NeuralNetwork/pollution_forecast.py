@@ -25,9 +25,9 @@ def forecast(temp, wind_speed, wind_dir, pressure, humidity, condition):
 
     if 157.5 < wind_dir <= 202.5:
         wind_dir = 0
-    elif 0 <= wind_dir <= 22.5 or 315 < wind_dir <= 360:
+    elif 0 <= wind_dir <= 22.5 or 337.5 < wind_dir <= 360:
         wind_dir = 1
-    elif 247.5 < wind_dir <= 315:
+    elif 247.5 < wind_dir <= 292.5:
         wind_dir = 2
     elif 202.5 < wind_dir <= 247.5:
         wind_dir = 3
@@ -35,8 +35,10 @@ def forecast(temp, wind_speed, wind_dir, pressure, humidity, condition):
         wind_dir = 4
     elif 67.5 < wind_dir <= 112.5:
         wind_dir = 5
-    else:
+    elif 22.5 < wind_dir <= 67.5:
         wind_dir = 6
+    else:
+        wind_dir = 7
 
     indicators = [[int(temp), float(wind_speed), int(wind_dir), int(pressure), int(humidity),
                    c_clear, c_cloudy, c_light_rain, c_light_snow, c_overcast, c_snow, c_wet_snow]]
@@ -44,4 +46,4 @@ def forecast(temp, wind_speed, wind_dir, pressure, humidity, condition):
     return result
 
 
-print(forecast('-3', '3.7', '270', '733', '66', 'overcast'))
+# print(forecast('-3', '3.7', '270', '733', '66', 'overcast'))
