@@ -12,7 +12,7 @@ warnings.simplefilter('ignore')
 rcParams['figure.figsize'] = 8, 5
 
 
-df = pd.read_csv("D:\data.csv")
+df = pd.read_csv("D:\data_2.csv")
 
 df['c - clear'] = True
 df['c - cloudy'] = True
@@ -22,7 +22,7 @@ df['c - overcast'] = True
 df['c - snow'] = True
 df['c - wet-snow'] = True
 
-for i in range(0, 3950):
+for i in range(0, 5882):
     if df['condition'][i] == 'clear':
         df['c - clear'][i] = True
         df['c - cloudy'][i] = False

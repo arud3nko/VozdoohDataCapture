@@ -44,4 +44,4 @@ def forecast(temp, wind_speed, wind_dir, pressure, humidity, condition):
     return result
 
 
-# print(forecast('-5', '1.2', '200', '751', '58', 'clear'))
+print(forecast('-3', '3.7', '270', '733', '66', 'overcast'))
