@@ -106,6 +106,27 @@ def pollution_wind_speed_graph(pollution, wind_speed):
     plt.savefig(global_path+"images/graph-pollution-wind-speed.png")
 
 
+def pollution_pressure_graph(pollution, pressure):
+
+    c = ['lawngreen', 'green', 'palegreen', 'lightcoral', 'red', 'darkred']
+    v = [0, 0.4, 0.5, 0.6, 0.9, 1.]
+    l = list(zip(v, c))
+    user_cmap = LinearSegmentedColormap.from_list('rg', l)
+
+    fig, ax = plt.subplots(figsize=(12, 8))
+
+    ax.scatter(x=pressure, y=pollution, c=pollution, cmap=user_cmap)
+
+    plt.xlabel("Атмосферное давление, мм. рт. ст.")
+    plt.ylabel("Уровень загрязнения, AQI")
+
+    plt.title(f"График зависимости уровня загрязнения воздуха\nот атмосферного давления. Последнее обновление: {datetime.now(Krasnoyarsk)}")
+
+    watermark()
+
+    plt.savefig(global_path+"images/graph-pollution-pressure.png")
+
+
 def pollution_wind_speed_temp_graph(pollution, wind_speed, temperature):
 
     fig = plt.figure(figsize=(12,8))
@@ -153,16 +174,19 @@ def main():
     pollution = []
     wind_speed = []
     temperature = []
+    pressure = []
 
     for row in rows:
         pollution.append(int(row[2]))
         wind_speed.append(float(row[4]))
         temperature.append(int(row[3]))
+        pressure.append(int(row[6]))
 
     pollution_time_graph(pollution, wind_speed)
     wind_speed_time_graph(pollution, wind_speed)
     pollution_wind_speed_graph(pollution, wind_speed)
     pollution_wind_speed_temp_graph(pollution, wind_speed, temperature)
+    pollution_pressure_graph(pollution, pressure)
 
 
 if __name__ == "__main__":

@@ -22,7 +22,7 @@ df['c - overcast'] = True
 df['c - snow'] = True
 df['c - wet-snow'] = True
 
-for i in range(0, 5882):
+for i in range(0, 5883):
     if df['condition'][i] == 'clear':
         df['c - clear'][i] = True
         df['c - cloudy'][i] = False
