@@ -34,7 +34,7 @@ def get_current_pollution():
 
 
 def main():
-    pass
+    print(get_current_pollution())
 
 
 if __name__ == '__main__':

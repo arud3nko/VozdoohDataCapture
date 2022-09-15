@@ -11,79 +11,11 @@ import joblib
 warnings.simplefilter('ignore')
 rcParams['figure.figsize'] = 8, 5
 
+df = pd.read_csv("data.csv")
 
-df = pd.read_csv("D:\data_2.csv")
+df.drop(['id', 'date', 'wind_dir', 'cloudness',
+         'condition', 'season'], axis=1, inplace=True)
 
-df['c - clear'] = True
-df['c - cloudy'] = True
-df['c - light-rain'] = True
-df['c - light-snow'] = True
-df['c - overcast'] = True
-df['c - snow'] = True
-df['c - wet-snow'] = True
-
-for i in range(0, 5883):
-    if df['condition'][i] == 'clear':
-        df['c - clear'][i] = True
-        df['c - cloudy'][i] = False
-        df['c - light-rain'][i] = False
-        df['c - light-snow'][i] = False
-        df['c - overcast'][i] = False
-        df['c - snow'][i] = False
-        df['c - wet-snow'][i] = False
-    elif df['condition'][i] == 'cloudy':
-        df['c - clear'][i] = False
-        df['c - cloudy'][i] = True
-        df['c - light-rain'][i] = False
-        df['c - light-snow'][i] = False
-        df['c - overcast'][i] = False
-        df['c - snow'][i] = False
-        df['c - wet-snow'][i] = False
-    elif df['condition'][i] == 'light-rain':
-        df['c - clear'][i] = False
-        df['c - cloudy'][i] = False
-        df['c - light-rain'][i] = True
-        df['c - light-snow'][i] = False
-        df['c - overcast'][i] = False
-        df['c - snow'][i] = False
-        df['c - wet-snow'][i] = False
-    elif df['condition'][i] == 'light-snow':
-        df['c - clear'][i] = False
-        df['c - cloudy'][i] = False
-        df['c - light-rain'][i] = False
-        df['c - light-snow'][i] = True
-        df['c - overcast'][i] = False
-        df['c - snow'][i] = False
-        df['c - wet-snow'][i] = False
-    elif df['condition'][i] == 'overcast':
-        df['c - clear'][i] = False
-        df['c - cloudy'][i] = False
-        df['c - light-rain'][i] = False
-        df['c - light-snow'][i] = False
-        df['c - overcast'][i] = True
-        df['c - snow'][i] = False
-        df['c - wet-snow'][i] = False
-    elif df['condition'][i] == 'snow':
-        df['c - clear'][i] = False
-        df['c - cloudy'][i] = False
-        df['c - light-rain'][i] = False
-        df['c - light-snow'][i] = False
-        df['c - overcast'][i] = False
-        df['c - snow'][i] = True
-        df['c - wet-snow'][i] = False
-    elif df['condition'][i] == 'wet-snow':
-        df['c - clear'][i] = False
-        df['c - cloudy'][i] = False
-        df['c - light-rain'][i] = False
-        df['c - light-snow'][i] = False
-        df['c - overcast'][i] = False
-        df['c - snow'][i] = False
-        df['c - wet-snow'][i] = True
-
-df.drop(['condition'], axis=1, inplace=True)
-df.drop(['id', 'date', 'cloudness', 'season'], axis=1, inplace=True)
-
-df['wind_dir'] = pd.factorize(df['wind_dir'])[0]
 temp = df['temp']
 y = df['pollution']
 df.drop(['pollution'], axis=1, inplace=True)

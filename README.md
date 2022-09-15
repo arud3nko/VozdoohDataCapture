@@ -1,5 +1,6 @@
-# Проект в рамках дисциплины ВВПД СФУ. 
-## Выполняется: София Рус, Егор Удалов
+# Open-source проект VOZDOOH.info
+## https://vozdooh.info/
+
 
 ![telegram](https://img.shields.io/badge/Telegram-arud3nko-informational?style=for-the-badge&logo=appveyor)
 ![issues](https://img.shields.io/github/issues/arud3nko/python-ML-airpollution?label=ISSUES&style=for-the-badge)
@@ -19,28 +20,34 @@
 
 · Создан landing-page на Flask
 
+
+
 ![site](https://i.ibb.co/71JnpkP/2022-03-29-11-11-16-PM.png)
 
 · Создан макет Telegram-бота в Figma: https://www.figma.com/file/YUI2ipUfK9KhMZ3sNFBU5v/Prototyping-in-Figma
 
 · Обучена нейронная сеть для прогнозирования качества воздуха
 
+· (**15.09.22**) Полный рефактор кода с другим подходом к прогнозированию
+
+· (**15.09.22**) Полный редизайн веб-страницы сервиса
+
+![new-site](https://sun9-west.userapi.com/sun9-4/s/v1/ig2/r-A12hKD7XTZdQNszlysGk4XJgXml8SM79w6BkCHkLaqAeAj5UzraxCjuT6jiMVMw2voU1rxqyM57gQgCbXnn6ZF.jpg?size=2560x1403&quality=96&type=album)
+
 ***
 
 ## Задачи
-1) Организовать парсинг данных одного из погодных сервисов
-2) Организовать сбор показателей уровня загрязнения воздуха, используя сервис nebo.live
-3) Создать ML-модель, вычисляющую зависимость уровня загрязнения воздуха от погодных условий
-4) Проработать и организовать методы оповещения: web-сервис на Flask и/или Telegram-бот
+1) ~~Организовать парсинг данных одного из погодных сервисов~~
+2) ~~Организовать сбор показателей уровня загрязнения воздуха, используя сервис nebo.live~~
+3) ~~Создать ML-модель, вычисляющую зависимость уровня загрязнения воздуха от погодных условий~~
+4) ~~Проработать и организовать методы оповещения: web-сервис на Flask и/или Telegram-бот~~
+5) (**15.09.22**) Рефактор модуля DataCapture
+6) (**15.09.22**) Корректировка верстки под мобильную версию сайта
+7) (**15.09.22**) Полный переход на API от tomorrow.io
 
 ***
 
 ## Цель
-Создать сервис, заранее рассчитывающий уровень загрязнения, в зависимости от погодных условий.
+~~Создать сервис, заранее рассчитывающий уровень загрязнения, в зависимости от погодных условий.~~
 
-![Иллюстрация к проекту](https://sun9-73.userapi.com/impg/hXUcAJhPO8z6qYBaD6oV-yEZbkvdeRYAQH9epg/u6WFvY7DbzI.jpg?size=1712x1074&quality=96&sign=ea86c5df1e4429034bd6c002a806c863&type=album)
-
-
-*** 
-## Источники:
-Nebo.live API: https://nebo.live/docs/v2/index.html
+Выполнено ✅
